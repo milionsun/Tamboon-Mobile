@@ -14,6 +14,10 @@
 		DFE375BD1FE274CA0087C61D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE375BB1FE274CA0087C61D /* LaunchScreen.storyboard */; };
 		DFE375C81FE274CA0087C61D /* Tamboon_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375C71FE274CA0087C61D /* Tamboon_MobileTests.swift */; };
 		DFE375D31FE274CA0087C61D /* Tamboon_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375D21FE274CA0087C61D /* Tamboon_MobileUITests.swift */; };
+		DFE375E11FE277C90087C61D /* CharityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375E01FE277C90087C61D /* CharityTableViewCell.swift */; };
+		DFE375E31FE278690087C61D /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375E21FE278690087C61D /* DonationViewController.swift */; };
+		DFE375E51FE27AE30087C61D /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375E41FE27AE30087C61D /* SuccessViewController.swift */; };
+		DFE375E71FE27C670087C61D /* CharityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375E61FE27C670087C61D /* CharityObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		DFE375CE1FE274CA0087C61D /* Tamboon-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tamboon-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE375D21FE274CA0087C61D /* Tamboon_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamboon_MobileUITests.swift; sourceTree = "<group>"; };
 		DFE375D41FE274CA0087C61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE375E01FE277C90087C61D /* CharityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
+		DFE375E21FE278690087C61D /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		DFE375E41FE27AE30087C61D /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		DFE375E61FE27C670087C61D /* CharityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				DFE375B21FE274CA0087C61D /* AppDelegate.swift */,
 				DFE375B41FE274CA0087C61D /* ViewController.swift */,
+				DFE375E01FE277C90087C61D /* CharityTableViewCell.swift */,
+				DFE375E21FE278690087C61D /* DonationViewController.swift */,
+				DFE375E41FE27AE30087C61D /* SuccessViewController.swift */,
+				DFE375E61FE27C670087C61D /* CharityObject.swift */,
 				DFE375B61FE274CA0087C61D /* Main.storyboard */,
 				DFE375B91FE274CA0087C61D /* Assets.xcassets */,
 				DFE375BB1FE274CA0087C61D /* LaunchScreen.storyboard */,
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE375B51FE274CA0087C61D /* ViewController.swift in Sources */,
+				DFE375E71FE27C670087C61D /* CharityObject.swift in Sources */,
 				DFE375B31FE274CA0087C61D /* AppDelegate.swift in Sources */,
+				DFE375E31FE278690087C61D /* DonationViewController.swift in Sources */,
+				DFE375E51FE27AE30087C61D /* SuccessViewController.swift in Sources */,
+				DFE375E11FE277C90087C61D /* CharityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
