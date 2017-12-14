@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFE375B31FE274CA0087C61D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375B21FE274CA0087C61D /* AppDelegate.swift */; };
+		DFE375B51FE274CA0087C61D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375B41FE274CA0087C61D /* ViewController.swift */; };
+		DFE375B81FE274CA0087C61D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE375B61FE274CA0087C61D /* Main.storyboard */; };
+		DFE375BA1FE274CA0087C61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE375B91FE274CA0087C61D /* Assets.xcassets */; };
+		DFE375BD1FE274CA0087C61D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE375BB1FE274CA0087C61D /* LaunchScreen.storyboard */; };
+		DFE375C81FE274CA0087C61D /* Tamboon_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375C71FE274CA0087C61D /* Tamboon_MobileTests.swift */; };
+		DFE375D31FE274CA0087C61D /* Tamboon_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375D21FE274CA0087C61D /* Tamboon_MobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFE375C41FE274CA0087C61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE375A71FE274CA0087C61D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFE375AE1FE274CA0087C61D;
+			remoteInfo = "Tamboon-Mobile";
+		};
+		DFE375CF1FE274CA0087C61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE375A71FE274CA0087C61D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFE375AE1FE274CA0087C61D;
+			remoteInfo = "Tamboon-Mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFE375AF1FE274CA0087C61D /* Tamboon-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tamboon-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE375B21FE274CA0087C61D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFE375B41FE274CA0087C61D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFE375B71FE274CA0087C61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFE375B91FE274CA0087C61D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE375BC1FE274CA0087C61D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFE375BE1FE274CA0087C61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE375C31FE274CA0087C61D /* Tamboon-MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tamboon-MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE375C71FE274CA0087C61D /* Tamboon_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamboon_MobileTests.swift; sourceTree = "<group>"; };
+		DFE375C91FE274CA0087C61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE375CE1FE274CA0087C61D /* Tamboon-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tamboon-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE375D21FE274CA0087C61D /* Tamboon_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamboon_MobileUITests.swift; sourceTree = "<group>"; };
+		DFE375D41FE274CA0087C61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFE375AC1FE274CA0087C61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375C01FE274CA0087C61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375CB1FE274CA0087C61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFE375A61FE274CA0087C61D = {
+			isa = PBXGroup;
+			children = (
+				DFE375B11FE274CA0087C61D /* Tamboon-Mobile */,
+				DFE375C61FE274CA0087C61D /* Tamboon-MobileTests */,
+				DFE375D11FE274CA0087C61D /* Tamboon-MobileUITests */,
+				DFE375B01FE274CA0087C61D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFE375B01FE274CA0087C61D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFE375AF1FE274CA0087C61D /* Tamboon-Mobile.app */,
+				DFE375C31FE274CA0087C61D /* Tamboon-MobileTests.xctest */,
+				DFE375CE1FE274CA0087C61D /* Tamboon-MobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFE375B11FE274CA0087C61D /* Tamboon-Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				DFE375B21FE274CA0087C61D /* AppDelegate.swift */,
+				DFE375B41FE274CA0087C61D /* ViewController.swift */,
+				DFE375B61FE274CA0087C61D /* Main.storyboard */,
+				DFE375B91FE274CA0087C61D /* Assets.xcassets */,
+				DFE375BB1FE274CA0087C61D /* LaunchScreen.storyboard */,
+				DFE375BE1FE274CA0087C61D /* Info.plist */,
+			);
+			path = "Tamboon-Mobile";
+			sourceTree = "<group>";
+		};
+		DFE375C61FE274CA0087C61D /* Tamboon-MobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE375C71FE274CA0087C61D /* Tamboon_MobileTests.swift */,
+				DFE375C91FE274CA0087C61D /* Info.plist */,
+			);
+			path = "Tamboon-MobileTests";
+			sourceTree = "<group>";
+		};
+		DFE375D11FE274CA0087C61D /* Tamboon-MobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE375D21FE274CA0087C61D /* Tamboon_MobileUITests.swift */,
+				DFE375D41FE274CA0087C61D /* Info.plist */,
+			);
+			path = "Tamboon-MobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFE375AE1FE274CA0087C61D /* Tamboon-Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE375D71FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-Mobile" */;
+			buildPhases = (
+				DFE375AB1FE274CA0087C61D /* Sources */,
+				DFE375AC1FE274CA0087C61D /* Frameworks */,
+				DFE375AD1FE274CA0087C61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tamboon-Mobile";
+			productName = "Tamboon-Mobile";
+			productReference = DFE375AF1FE274CA0087C61D /* Tamboon-Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFE375C21FE274CA0087C61D /* Tamboon-MobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE375DA1FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-MobileTests" */;
+			buildPhases = (
+				DFE375BF1FE274CA0087C61D /* Sources */,
+				DFE375C01FE274CA0087C61D /* Frameworks */,
+				DFE375C11FE274CA0087C61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE375C51FE274CA0087C61D /* PBXTargetDependency */,
+			);
+			name = "Tamboon-MobileTests";
+			productName = "Tamboon-MobileTests";
+			productReference = DFE375C31FE274CA0087C61D /* Tamboon-MobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DFE375CD1FE274CA0087C61D /* Tamboon-MobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE375DD1FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-MobileUITests" */;
+			buildPhases = (
+				DFE375CA1FE274CA0087C61D /* Sources */,
+				DFE375CB1FE274CA0087C61D /* Frameworks */,
+				DFE375CC1FE274CA0087C61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE375D01FE274CA0087C61D /* PBXTargetDependency */,
+			);
+			name = "Tamboon-MobileUITests";
+			productName = "Tamboon-MobileUITests";
+			productReference = DFE375CE1FE274CA0087C61D /* Tamboon-MobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFE375A71FE274CA0087C61D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Chayanon;
+				TargetAttributes = {
+					DFE375AE1FE274CA0087C61D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					DFE375C21FE274CA0087C61D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DFE375AE1FE274CA0087C61D;
+					};
+					DFE375CD1FE274CA0087C61D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DFE375AE1FE274CA0087C61D;
+					};
+				};
+			};
+			buildConfigurationList = DFE375AA1FE274CA0087C61D /* Build configuration list for PBXProject "Tamboon-Mobile" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFE375A61FE274CA0087C61D;
+			productRefGroup = DFE375B01FE274CA0087C61D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFE375AE1FE274CA0087C61D /* Tamboon-Mobile */,
+				DFE375C21FE274CA0087C61D /* Tamboon-MobileTests */,
+				DFE375CD1FE274CA0087C61D /* Tamboon-MobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFE375AD1FE274CA0087C61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE375BD1FE274CA0087C61D /* LaunchScreen.storyboard in Resources */,
+				DFE375BA1FE274CA0087C61D /* Assets.xcassets in Resources */,
+				DFE375B81FE274CA0087C61D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375C11FE274CA0087C61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375CC1FE274CA0087C61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFE375AB1FE274CA0087C61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE375B51FE274CA0087C61D /* ViewController.swift in Sources */,
+				DFE375B31FE274CA0087C61D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375BF1FE274CA0087C61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE375C81FE274CA0087C61D /* Tamboon_MobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE375CA1FE274CA0087C61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE375D31FE274CA0087C61D /* Tamboon_MobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFE375C51FE274CA0087C61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFE375AE1FE274CA0087C61D /* Tamboon-Mobile */;
+			targetProxy = DFE375C41FE274CA0087C61D /* PBXContainerItemProxy */;
+		};
+		DFE375D01FE274CA0087C61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFE375AE1FE274CA0087C61D /* Tamboon-Mobile */;
+			targetProxy = DFE375CF1FE274CA0087C61D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFE375B61FE274CA0087C61D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE375B71FE274CA0087C61D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFE375BB1FE274CA0087C61D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE375BC1FE274CA0087C61D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFE375D51FE274CA0087C61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFE375D61FE274CA0087C61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFE375D81FE274CA0087C61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-Mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFE375D91FE274CA0087C61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-Mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-Mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DFE375DB1FE274CA0087C61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-MobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tamboon-Mobile.app/Tamboon-Mobile";
+			};
+			name = Debug;
+		};
+		DFE375DC1FE274CA0087C61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-MobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-MobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tamboon-Mobile.app/Tamboon-Mobile";
+			};
+			name = Release;
+		};
+		DFE375DE1FE274CA0087C61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-MobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tamboon-Mobile";
+			};
+			name = Debug;
+		};
+		DFE375DF1FE274CA0087C61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N67JR84S56;
+				INFOPLIST_FILE = "Tamboon-MobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-MobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tamboon-Mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFE375AA1FE274CA0087C61D /* Build configuration list for PBXProject "Tamboon-Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE375D51FE274CA0087C61D /* Debug */,
+				DFE375D61FE274CA0087C61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE375D71FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE375D81FE274CA0087C61D /* Debug */,
+				DFE375D91FE274CA0087C61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE375DA1FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-MobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE375DB1FE274CA0087C61D /* Debug */,
+				DFE375DC1FE274CA0087C61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE375DD1FE274CA0087C61D /* Build configuration list for PBXNativeTarget "Tamboon-MobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE375DE1FE274CA0087C61D /* Debug */,
+				DFE375DF1FE274CA0087C61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFE375A71FE274CA0087C61D /* Project object */;
+}
