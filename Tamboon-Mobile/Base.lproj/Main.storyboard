@@ -66,31 +66,19 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETL-2g-vPN">
                                 <rect key="frame" x="10" y="627" width="355" height="30"/>
-                                <state key="normal" title="Donate"/>
+                                <state key="normal" title="Set Credit Card"/>
                                 <connections>
                                     <action selector="donateButtonTouched:" destination="vw3-Et-V9N" eventType="touchUpInside" id="Zb9-vF-PcK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYW-V6-dVt">
-                                <rect key="frame" x="10" y="30" width="355" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rju-K3-DuN">
-                                <rect key="frame" x="10" y="60.5" width="355" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CNv-Ff-eWH">
-                                <rect key="frame" x="10" y="131" width="355" height="30"/>
+                                <rect key="frame" x="10" y="116" width="355" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-F8-lq7">
                                         <rect key="frame" x="0.0" y="0.0" width="311.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dde-s0-zbV">
                                         <rect key="frame" x="321.5" y="0.0" width="33.5" height="30"/>
@@ -101,35 +89,48 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0F-Sd-oj0">
-                                <rect key="frame" x="10" y="100.5" width="355" height="20.5"/>
+                                <rect key="frame" x="10" y="85.5" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ti-bn-Mb0">
+                                <rect key="frame" x="10" y="25" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEn-jo-Vdx">
+                                <rect key="frame" x="10" y="50.5" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EYW-V6-dVt" firstAttribute="top" secondItem="jgp-F2-SO4" secondAttribute="top" constant="10" id="1tC-jh-eJP"/>
+                            <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="2ti-bn-Mb0" secondAttribute="trailing" constant="10" id="4D2-2o-Rgv"/>
                             <constraint firstItem="CNv-Ff-eWH" firstAttribute="top" secondItem="U0F-Sd-oj0" secondAttribute="bottom" constant="10" id="7wV-vv-7oL"/>
-                            <constraint firstItem="Rju-K3-DuN" firstAttribute="top" secondItem="EYW-V6-dVt" secondAttribute="bottom" constant="10" id="B5C-gE-J1Q"/>
-                            <constraint firstItem="U0F-Sd-oj0" firstAttribute="trailing" secondItem="Rju-K3-DuN" secondAttribute="trailing" id="HiX-Rj-DVD"/>
+                            <constraint firstItem="2ti-bn-Mb0" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" constant="10" id="H22-CP-plZ"/>
+                            <constraint firstItem="VEn-jo-Vdx" firstAttribute="leading" secondItem="2ti-bn-Mb0" secondAttribute="leading" id="I6r-kD-Rin"/>
+                            <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="U0F-Sd-oj0" secondAttribute="trailing" constant="10" id="IcY-t3-oV5"/>
+                            <constraint firstItem="VEn-jo-Vdx" firstAttribute="top" secondItem="2ti-bn-Mb0" secondAttribute="bottom" constant="5" id="KQL-Y2-amD"/>
+                            <constraint firstItem="U0F-Sd-oj0" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" constant="10" id="KxT-Mx-bav"/>
                             <constraint firstItem="CNv-Ff-eWH" firstAttribute="trailing" secondItem="U0F-Sd-oj0" secondAttribute="trailing" id="TV5-H0-fC9"/>
-                            <constraint firstItem="Rju-K3-DuN" firstAttribute="leading" secondItem="EYW-V6-dVt" secondAttribute="leading" id="b0V-Uc-RLt"/>
-                            <constraint firstItem="EYW-V6-dVt" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" constant="10" id="gUf-jm-dEw"/>
+                            <constraint firstItem="U0F-Sd-oj0" firstAttribute="top" secondItem="VEn-jo-Vdx" secondAttribute="bottom" constant="5" id="b5G-rO-Ucg"/>
+                            <constraint firstItem="2ti-bn-Mb0" firstAttribute="top" secondItem="jgp-F2-SO4" secondAttribute="top" constant="5" id="b5H-7o-IJE"/>
                             <constraint firstItem="CNv-Ff-eWH" firstAttribute="leading" secondItem="U0F-Sd-oj0" secondAttribute="leading" id="i5u-4i-Jfd"/>
                             <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="ETL-2g-vPN" secondAttribute="trailing" constant="10" id="jTt-M7-xaD"/>
                             <constraint firstItem="ETL-2g-vPN" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" constant="10" id="jdm-pO-NFt"/>
-                            <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="EYW-V6-dVt" secondAttribute="trailing" constant="10" id="qsb-wx-4XE"/>
-                            <constraint firstItem="U0F-Sd-oj0" firstAttribute="leading" secondItem="Rju-K3-DuN" secondAttribute="leading" id="uWE-lb-k5l"/>
-                            <constraint firstItem="U0F-Sd-oj0" firstAttribute="top" secondItem="Rju-K3-DuN" secondAttribute="bottom" constant="10" id="xZ0-hg-uiB"/>
+                            <constraint firstItem="VEn-jo-Vdx" firstAttribute="trailing" secondItem="2ti-bn-Mb0" secondAttribute="trailing" id="zU7-TH-g6a"/>
                             <constraint firstItem="jgp-F2-SO4" firstAttribute="bottom" secondItem="ETL-2g-vPN" secondAttribute="bottom" constant="10" id="zY1-Mj-9pu"/>
-                            <constraint firstItem="Rju-K3-DuN" firstAttribute="trailing" secondItem="EYW-V6-dVt" secondAttribute="trailing" id="zpE-c4-Pde"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jgp-F2-SO4"/>
                     </view>
                     <connections>
-                        <outlet property="cardNumberTextField" destination="Rju-K3-DuN" id="Uyu-1V-al3"/>
+                        <outlet property="button" destination="ETL-2g-vPN" id="6yR-P8-nDc"/>
                         <outlet property="donateAmountTextField" destination="AdJ-F8-lq7" id="frA-88-CB3"/>
+                        <outlet property="nameTextField" destination="VEn-jo-Vdx" id="gwI-pa-Lds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jax-O7-rmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,7 +140,7 @@
         <!--Success View Controller-->
         <scene sceneID="yfx-B3-NRA">
             <objects>
-                <viewController storyboardIdentifier="SuccessView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jqx-xZ-05x" customClass="SuccessViewController" customModule="Tamboon_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jqx-xZ-05x" customClass="SuccessViewController" customModule="Tamboon_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2z-Wu-Wxe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

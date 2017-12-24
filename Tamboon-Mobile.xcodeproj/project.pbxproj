@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFB0F4CD1FEC3E4D00F93B0B /* OmiseSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB0F4CC1FEC3E4D00F93B0B /* OmiseSDK.framework */; };
 		DFE375B31FE274CA0087C61D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375B21FE274CA0087C61D /* AppDelegate.swift */; };
 		DFE375B51FE274CA0087C61D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE375B41FE274CA0087C61D /* ViewController.swift */; };
 		DFE375B81FE274CA0087C61D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE375B61FE274CA0087C61D /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DFB0F4CC1FEC3E4D00F93B0B /* OmiseSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OmiseSDK.framework; path = Carthage/Build/iOS/OmiseSDK.framework; sourceTree = "<group>"; };
 		DFE375AF1FE274CA0087C61D /* Tamboon-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tamboon-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE375B21FE274CA0087C61D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE375B41FE274CA0087C61D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB0F4CD1FEC3E4D00F93B0B /* OmiseSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFB0F4CB1FEC3E4D00F93B0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFB0F4CC1FEC3E4D00F93B0B /* OmiseSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFE375A61FE274CA0087C61D = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				DFE375C61FE274CA0087C61D /* Tamboon-MobileTests */,
 				DFE375D11FE274CA0087C61D /* Tamboon-MobileUITests */,
 				DFE375B01FE274CA0087C61D /* Products */,
+				DFB0F4CB1FEC3E4D00F93B0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +159,7 @@
 				DFE375AB1FE274CA0087C61D /* Sources */,
 				DFE375AC1FE274CA0087C61D /* Frameworks */,
 				DFE375AD1FE274CA0087C61D /* Resources */,
+				DFB0F4CE1FEC3E6900F93B0B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -265,6 +278,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFB0F4CE1FEC3E6900F93B0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/OmiseSDK.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFE375AB1FE274CA0087C61D /* Sources */ = {
@@ -444,6 +474,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N67JR84S56;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tamboon-Mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-Mobile";
@@ -459,6 +493,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N67JR84S56;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tamboon-Mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Chayanon.Tamboon-Mobile";
