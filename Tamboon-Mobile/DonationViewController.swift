@@ -145,18 +145,26 @@ extension DonationViewController : CreditCardFormDelegate {
         
         // Start HTTP POST
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let response = response {
-                print(response)
+            if let response = response as? HTTPURLResponse {
+//                print(response)
+                // Check Status Code
+                switch (response.statusCode) {
+                case 200:
+                    self.chargeSuccess()
+                    break
+                default:
+                    self.chargeFail()
+                    break
+                }
+            } else {
+                self.chargeFail()
             }
+            
+            /* For debug
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
                     print(json)
-                    DispatchQueue.main.async {
-                        self.hideActivityIndicator()
-                        let successViewController = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
-                        self.navigationController?.pushViewController(successViewController, animated: true)
-                    }
                 } catch {
                     DispatchQueue.main.async {
                         self.hideActivityIndicator()
@@ -171,8 +179,33 @@ extension DonationViewController : CreditCardFormDelegate {
                 }
                 print(error)
             }
+            */
         }
         task.resume()
+    }
+    
+    // Success, Show finish page
+    func chargeSuccess() {
+        DispatchQueue.main.async {
+            self.hideActivityIndicator()
+            let successViewController = self.storyboard?.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
+            self.navigationController?.pushViewController(successViewController, animated: true)
+        }
+    }
+    
+    // Failed, Show error
+    func chargeFail() {
+        DispatchQueue.main.async {
+            self.hideActivityIndicator()
+            self.showAlert(title: "Donation Error", message: "Please contact administrator")
+        }
+    }
+    
+    func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func creditCardForm(_ controller: CreditCardFormController, didFailWithError error: Error) {
