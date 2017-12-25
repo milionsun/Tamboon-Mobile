@@ -26,6 +26,7 @@ class DonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hide keyboard when user touches background view
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -40,29 +41,28 @@ class DonationViewController: UIViewController {
         activityIndicator.activityIndicatorViewStyle = .whiteLarge
         
         activityBackground.addSubview(activityIndicator)
+        
+        // Set button to disable
+        button.isEnabled = false
+        
+        // Check donate amount when TextField is changed
+        donateAmountTextField.addTarget(self, action: #selector(textFieldIsChanged(textField:)), for: UIControlEvents.editingChanged)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    // Perform when user touch donate button
+    // Perform when user touch "Set Credit Card" button
     @IBAction func donateButtonTouched(_ sender: Any) {
-        guard let amountText = donateAmountTextField.text else {
-            return
-        }
+        let amountText = donateAmountTextField.text!
 
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        guard let amount = formatter.number(from: amountText)?.doubleValue else {
-            return
-        }
-        print("\(amountText) => \(amount)")
+        let amount = formatter.number(from: amountText)!.doubleValue
+        
+        // Change amount from Baht to Satang
         self.amount = (Int) (amount * 100)
-
-        guard let _ = nameTextField.text else {
-            return
-        }
 
         let closeButton = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(dismissCreditCardForm))
 
@@ -92,6 +92,28 @@ class DonationViewController: UIViewController {
         activityIndicator.stopAnimating()
         activityBackground.removeFromSuperview()
     }
+    
+    @objc func textFieldIsChanged(textField: UITextField) {
+        guard let text = textField.text else {
+            // Cannot retrieve text
+            button.isEnabled = false
+            return
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        guard let amount = formatter.number(from: text)?.doubleValue else {
+            // Cannot convert donate amount from text
+            button.isEnabled = false
+            return
+        }
+        
+        if amount > 0 {
+            button.isEnabled = true
+        } else {
+            button.isEnabled = false
+        }
+    }
 }
 
 extension DonationViewController : CreditCardFormDelegate {
@@ -109,7 +131,11 @@ extension DonationViewController : CreditCardFormDelegate {
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         
-        let dict = ["name" : nameTextField.text!, "token" : token.tokenId, "amount" : self.amount] as [String : Any?]
+        // Make JSON body
+        let dict = ["name" : nameTextField.text!,
+                    "token" : token.tokenId,
+                    "amount" : self.amount] as [String : Any?]
+        
         guard let body = try? JSONSerialization.data(withJSONObject: dict, options: [])
             else {
                 return
@@ -117,6 +143,7 @@ extension DonationViewController : CreditCardFormDelegate {
         
         request.httpBody = body
         
+        // Start HTTP POST
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response {
                 print(response)
