@@ -12,6 +12,8 @@ import OmiseSDK
 class DonationViewController: UIViewController {
     // Omise Public Key
     private let publicKey = "pkey_test_5aajhp4l3ouwpae8cg1"
+    // Server
+    private let server = "http://192.168.0.113:8080"
     
     var charity : CharityObject?
     var amount = 0
@@ -122,7 +124,7 @@ extension DonationViewController : CreditCardFormDelegate {
         self.showActivityIndicator()
         
         // Sends `OmiseToken` to your server for creating a charge, or a customer object.
-        let urlString = "http://192.168.0.113:8080/donations"
+        let urlString = self.server + "/donations"
         guard let url = URL(string: urlString)
             else {
                 return

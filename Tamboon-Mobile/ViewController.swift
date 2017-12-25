@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UITableViewController {
     private var charityArray : [CharityObject] = []
+    // Server
+    private let server = "http://192.168.0.113:8080"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshButton = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(getDatabase))
+        self.navigationItem.rightBarButtonItem = refreshButton
         getDatabase()
     }
 
@@ -20,8 +24,8 @@ class ViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func getDatabase() {
-        let urlString = "http://192.168.0.113:8080/charities"
+    @objc func getDatabase() {
+        let urlString = self.server + "/charities"
         guard let url = URL(string: urlString)
             else {
                 return
@@ -53,6 +57,7 @@ class ViewController: UITableViewController {
                 let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
                 print(json)
                 if let jsonArray = json as? [[String : Any]] {
+                    self.charityArray.removeAll()
                     for jsonObject in jsonArray {
                         let charity = CharityObject(id: jsonObject["id"] as? Int,
                                                     name: jsonObject["name"] as? String,
