@@ -65,7 +65,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETL-2g-vPN">
-                                <rect key="frame" x="10" y="627" width="355" height="30"/>
+                                <rect key="frame" x="0.0" y="196" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7rd-kE-VLF"/>
+                                </constraints>
                                 <state key="normal" title="Set Credit Card"/>
                                 <connections>
                                     <action selector="donateButtonTouched:" destination="vw3-Et-V9N" eventType="touchUpInside" id="Zb9-vF-PcK"/>
@@ -74,7 +78,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CNv-Ff-eWH">
                                 <rect key="frame" x="10" y="116" width="355" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-F8-lq7">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-F8-lq7">
                                         <rect key="frame" x="0.0" y="0.0" width="311.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -107,7 +111,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="2ti-bn-Mb0" secondAttribute="trailing" constant="10" id="4D2-2o-Rgv"/>
                             <constraint firstItem="CNv-Ff-eWH" firstAttribute="top" secondItem="U0F-Sd-oj0" secondAttribute="bottom" constant="10" id="7wV-vv-7oL"/>
@@ -120,10 +124,10 @@
                             <constraint firstItem="U0F-Sd-oj0" firstAttribute="top" secondItem="VEn-jo-Vdx" secondAttribute="bottom" constant="5" id="b5G-rO-Ucg"/>
                             <constraint firstItem="2ti-bn-Mb0" firstAttribute="top" secondItem="jgp-F2-SO4" secondAttribute="top" constant="5" id="b5H-7o-IJE"/>
                             <constraint firstItem="CNv-Ff-eWH" firstAttribute="leading" secondItem="U0F-Sd-oj0" secondAttribute="leading" id="i5u-4i-Jfd"/>
-                            <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="ETL-2g-vPN" secondAttribute="trailing" constant="10" id="jTt-M7-xaD"/>
-                            <constraint firstItem="ETL-2g-vPN" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" constant="10" id="jdm-pO-NFt"/>
+                            <constraint firstItem="jgp-F2-SO4" firstAttribute="trailing" secondItem="ETL-2g-vPN" secondAttribute="trailing" id="jTt-M7-xaD"/>
+                            <constraint firstItem="ETL-2g-vPN" firstAttribute="leading" secondItem="jgp-F2-SO4" secondAttribute="leading" id="jdm-pO-NFt"/>
+                            <constraint firstItem="ETL-2g-vPN" firstAttribute="top" secondItem="CNv-Ff-eWH" secondAttribute="bottom" constant="50" id="tej-Wd-48X"/>
                             <constraint firstItem="VEn-jo-Vdx" firstAttribute="trailing" secondItem="2ti-bn-Mb0" secondAttribute="trailing" id="zU7-TH-g6a"/>
-                            <constraint firstItem="jgp-F2-SO4" firstAttribute="bottom" secondItem="ETL-2g-vPN" secondAttribute="bottom" constant="10" id="zY1-Mj-9pu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jgp-F2-SO4"/>
                     </view>
