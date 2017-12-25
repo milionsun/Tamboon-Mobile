@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,16 +151,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="u6L-5o-AZR">
-                                <rect key="frame" x="127" y="183.5" width="121" height="100.5"/>
+                                <rect key="frame" x="94" y="170" width="187.5" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNd-ba-g4b">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Q9-lWg">
-                                        <rect key="frame" x="0.0" y="70.5" width="121" height="30"/>
+                                        <rect key="frame" x="0.0" y="98" width="187.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Back to first page"/>
                                         <connections>
                                             <action selector="backToFirstPage:" destination="jqx-xZ-05x" eventType="touchUpInside" id="3cM-aF-hEH"/>
@@ -168,8 +170,9 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="u6L-5o-AZR" firstAttribute="width" secondItem="K2z-Wu-Wxe" secondAttribute="width" multiplier="1:2" id="7g9-82-oIr"/>
                             <constraint firstItem="u6L-5o-AZR" firstAttribute="centerX" secondItem="K2z-Wu-Wxe" secondAttribute="centerX" id="uay-kr-6Ut"/>
                             <constraint firstItem="u6L-5o-AZR" firstAttribute="centerY" secondItem="K2z-Wu-Wxe" secondAttribute="centerY" constant="-100" id="wGO-1g-2RW"/>
                         </constraints>

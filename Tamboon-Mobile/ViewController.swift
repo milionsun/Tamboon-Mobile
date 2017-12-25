@@ -40,9 +40,8 @@ class ViewController: UITableViewController {
                     self.getFail()
                     break
                 }
-            }
-            if let error = error {
-                print(error)
+            } else {
+                self.getFail()
             }
         }
         task.resume()
@@ -71,6 +70,8 @@ class ViewController: UITableViewController {
 //                print("error: \(error)")
                 self.decodeFail()
             }
+        } else {
+            self.getFail()
         }
     }
     
