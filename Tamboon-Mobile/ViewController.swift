@@ -30,27 +30,15 @@ class ViewController: UITableViewController {
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let response = response {
-                print(response)
-            }
-            if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
-                    print(json)
-                    if let jsonArray = json as? [[String : Any]] {
-                        for jsonObject in jsonArray {
-                            let charity = CharityObject(id: jsonObject["id"] as? Int,
-                                                        name: jsonObject["name"] as? String,
-                                                        url: jsonObject["logo_url"] as? String)
-                            self.charityArray.append(charity)
-                        }
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
-                } catch {
-                    print(String.init(data: data, encoding: String.Encoding.utf8)!)
-                    print("error: \(error)")
+            if let response = response as? HTTPURLResponse {
+                // Check Status Code
+                switch (response.statusCode) {
+                case 200:
+                    self.decodeCharities(data: data)
+                    break
+                default:
+                    self.getFail()
+                    break
                 }
             }
             if let error = error {
@@ -58,6 +46,44 @@ class ViewController: UITableViewController {
             }
         }
         task.resume()
+    }
+    
+    func decodeCharities(data: Data?) {
+        if let data = data {
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
+                print(json)
+                if let jsonArray = json as? [[String : Any]] {
+                    for jsonObject in jsonArray {
+                        let charity = CharityObject(id: jsonObject["id"] as? Int,
+                                                    name: jsonObject["name"] as? String,
+                                                    url: jsonObject["logo_url"] as? String)
+                        self.charityArray.append(charity)
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    self.decodeFail()
+                }
+            } catch {
+//                print(String.init(data: data, encoding: String.Encoding.utf8)!)
+//                print("error: \(error)")
+                self.decodeFail()
+            }
+        }
+    }
+    
+    func decodeFail() {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Cannot retrieve charities information", message: "Please contact administrator")
+        }
+    }
+    
+    func getFail() {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Cannot retrieve charities information", message: "Please contact administrator")
+        }
     }
 
     // ======================================================================================================
@@ -87,5 +113,12 @@ class ViewController: UITableViewController {
     }
     
     // ======================================================================================================
+    
+    func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
